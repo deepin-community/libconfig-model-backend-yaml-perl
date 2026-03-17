@@ -8,13 +8,13 @@ Build-Depends: debhelper-compat (= 13),
                libmodule-build-perl,
                perl
 Build-Depends-Indep: libboolean-perl <!nocheck>,
-                     libconfig-model-perl (>= 2.131) <!nocheck>,
+                     libconfig-model-perl <!nocheck>,
                      libconfig-model-tester-perl (>= 4.001) <!nocheck>,
                      liblog-log4perl-perl <!nocheck>,
                      libpath-tiny-perl <!nocheck>,
                      libtest-memory-cycle-perl <!nocheck>,
-                     libyaml-libyaml-perl (>= 0.69) <!nocheck>
-Standards-Version: 4.5.1
+                     libyaml-libyaml-perl <!nocheck>
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libconfig-model-backend-yaml-perl
 Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libconfig-model-backend-yaml-perl.git
 Homepage: https://metacpan.org/release/Config-Model-Backend-Yaml
@@ -25,11 +25,9 @@ Architecture: all
 Depends: ${misc:Depends},
          ${perl:Depends},
          libboolean-perl,
-         libconfig-model-perl (>= 2.131),
+         libconfig-model-perl,
          liblog-log4perl-perl,
-         libyaml-libyaml-perl (>= 0.69)
-Breaks: libconfig-model-perl (<< 2.131)
-Replaces: libconfig-model-perl (<< 2.131)
+         libyaml-libyaml-perl
 Description: Read and write config as a YAML data structure
  Config::Model::Backend::Yaml is a Perl module used by Config::Model
  and cme to read or write YAML files.
